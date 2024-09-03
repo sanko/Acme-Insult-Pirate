@@ -23,6 +23,18 @@
          "builder"
       ]
    },
+   "optional_features" : {
+      "json" : {
+         "description" : "-json support in pirate_insult.pl",
+         "prereqs" : {
+            "runtime" : {
+               "requires" : {
+                  "JSON::Tiny" : "0.58"
+               }
+            }
+         }
+      }
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {

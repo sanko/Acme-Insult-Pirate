@@ -9,8 +9,9 @@ imported_ok qw[insult];
 #
 ok +insult(), 'stringify';
 #
-is Acme::Insult::Pirate::insult(), hash {
+is my $insult = Acme::Insult::Pirate::insult(), hash {
     field insult => D();
 }, 'hash (fake)';
+isa_ok $insult, ['Acme::Insult::Pirate'], 'insults are blessed hashes';
 #
 done_testing;

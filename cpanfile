@@ -1,8 +1,9 @@
 requires 'perl', '5.038000';
 requires 'Getopt::Long';
 requires 'HTTP::Tiny' => '0.088';
-
-#requires 'JSON::Tiny'      => '0.58'; # API returns insults as plain strings (for now)
+feature json => '-json support in pirate_insult.pl' => sub {
+    requires 'JSON::Tiny' => '0.58';    # API returns insults as plain strings (for now)
+};
 requires 'IO::Socket::SSL' => '1.42';
 requires 'Net::SSLeay'     => '1.49';
 requires 'Mozilla::CA';
